@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @RestController
 public class HeroController {
-    @Autowired // This means to get the bean called userRepository
+    @Autowired
     private HeroDAO dao;
 
 /*    @RequestMapping("/")
