@@ -1,0 +1,13 @@
+<div *ngIf="hero" class="example-container">
+  <h2>{{ hero.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <mat-form-field>
+        <input matInput [(ngModel)]="hero.name" placeholder="name">
+      </mat-form-field>
+    </label>
+  </div>
+</div>
+<button mat-button routerLink="/hero-list">Back</button>
+<button mat-button (click)="update()">Update</button>

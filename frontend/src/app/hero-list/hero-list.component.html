@@ -1,0 +1,17 @@
+<h2>Hero List</h2>
+
+<mat-card>
+  <mat-card-header>Hero List</mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let hero of heroes">
+       <!-- <img mat-list-avatar src="{{hero.giphyUrl}}" alt="{{hero.name}}"> -->
+        <h3 mat-line>
+        <a routerLink="/detail/{{hero.id}}">
+          {{hero.name}}
+        </a>
+        </h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

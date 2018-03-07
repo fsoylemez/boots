@@ -3,6 +3,7 @@ package com.accenture.controller;
 import com.accenture.dao.HeroDAO;
 import com.accenture.model.Hero;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,13 +34,13 @@ public class HeroController {
     }
 
     @PostMapping
-    public Hero save(Hero hero){
+    public Hero save(@RequestBody Hero hero){
         return dao.save(hero);//TODO fix
     }
 
     @PutMapping
-    public void update(Hero hero){
-        dao.save(hero);
+    public Hero update(@RequestBody Hero hero){
+       return save(hero);
     }
 
     @DeleteMapping(value = "/{id}")
