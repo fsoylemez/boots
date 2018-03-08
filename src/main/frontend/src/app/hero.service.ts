@@ -12,7 +12,7 @@ const httpOptions = {
 @Injectable()
 export class HeroService {
 
-  private heroesUrl = 'http://localhost:8080';
+  private heroesUrl = 'http://localhost:8080/heroes';
 
   constructor(private http: HttpClient) {
   }

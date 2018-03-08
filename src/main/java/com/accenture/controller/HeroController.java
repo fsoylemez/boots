@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping(value = "heroes")
 @CrossOrigin(origins = "http://localhost:4200")
 public class HeroController {
     @Autowired
